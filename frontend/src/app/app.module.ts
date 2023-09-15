@@ -167,7 +167,8 @@ const routes: Routes = [
     AngularFontAwesomeModule,
     HighchartsChartModule,
     AgGridModule,
-    AgGridModule.withComponents([RatingComponent])
+    AgGridModule.withComponents([RatingComponent]),
+    MatDialogModule
   ],
 
   providers: [DataService, AuthGuardService, ChartHelperService],
