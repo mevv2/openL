@@ -21,8 +21,7 @@ var mongoURL = "mongodb://127.0.0.1:27017/" //Local MongoDB
 
 //var mongoURL = "mongodb://mongo:27017/" //Local MongoDB Docker (mongo)
 //set NODE_OPTIONS=--openssl-legacy-provider
-//export NODE_OPTIONS=--openssl-legacy-provider
-//mhm
+
 
 //*****For docker****////
 //var mongoURL = 

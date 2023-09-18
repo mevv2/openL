@@ -78,6 +78,7 @@ import { EditDataComponent } from "./component/edit-data/edit-data.component";
 import { AgGridModule } from 'ag-grid-angular';
 import { RatingComponent } from './component/indicator-rating/indicator-rating.component';
 import { ReviewWindowComponent } from './component/review-window/review-window.component';
+import { GiveReviewComponent } from './component/give-review/give-review.component';
 
 const routes: Routes = [
   {
@@ -92,6 +93,7 @@ const routes: Routes = [
   { path: "dashboard", component: DashboardComponent },
   { path: "display/data", component: DisplayComponent },
   { path: "", redirectTo: "display/data", pathMatch: "full" },
+  { path: 'add/review', component: GiveReviewComponent },
 ];
 @NgModule({
   declarations: [
@@ -145,6 +147,7 @@ const routes: Routes = [
     EditDataComponent,
     RatingComponent,
     ReviewWindowComponent,
+    GiveReviewComponent,
   ],
   imports: [
     BrowserModule,
@@ -170,6 +173,7 @@ const routes: Routes = [
     AgGridModule.withComponents([RatingComponent]),
     MatDialogModule
   ],
+  entryComponents: [ReviewWindowComponent],
 
   providers: [DataService, AuthGuardService, ChartHelperService],
 

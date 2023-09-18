@@ -1,0 +1,9 @@
+.mat-dialog-content, .mat-dialog-actions {
+    flex-grow: 1;
+  }
+  
+.mat-dialog-actions {
+    display: flex;
+    justify-content: space-between; /* verteilt die Buttons gleichmäßig im Container */
+    align-items: flex-end; /* verschiebt die Buttons nach unten */
+  }

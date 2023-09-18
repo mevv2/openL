@@ -5,9 +5,11 @@
   [columnDefs]="columnDefs"
   [gridOptions]="gridOptions"
   [rowSelection]="rowSelection"
+  (cellClicked)="logIndicatorValue($event)"
   (gridReady)="onGridReady($event)"
   (cellValueChanged)="onCellValueChanged($event)"
   [rowHeight]="30"
   class="ag-theme-blue"
   style="width: 100%; height: 500px;"> 
 </ag-grid-angular>
+

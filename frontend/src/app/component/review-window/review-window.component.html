@@ -1,1 +1,7 @@
-<p>review-window works!</p>
+<div mat-dialog-content>
+  {{indicatorValue}}
+</div>
+<div mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Close</button>
+  <button mat-button mat-dialog-close (click)="goToReview()">Review</button>
+</div>

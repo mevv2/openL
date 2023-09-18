@@ -32,7 +32,7 @@ export class EditDataComponent implements OnInit {
     { headerName: 'Learning Activity', field: 'LearningActivity', width: 150, resizable: true, editable: true },
     { headerName: 'Indicator', field: 'Indicator', width: 300, resizable: true, editable: true },
     { checkboxSelection: true, headerName: 'Verdict', width: 80 },
-    { headerName: 'Rating', field: 'rating',cellRendererFramework: RatingComponent, width: 150, cellClicked: this.reviewClick.bind(this)}
+    { headerName: 'Rating', field: 'rating',cellRendererFramework: RatingComponent, width: 150, cellClicked: this.logIndicatorValue.bind(this)}
   ];
 
   rowSelection = 'multiple';
@@ -77,12 +77,14 @@ export class EditDataComponent implements OnInit {
       });
     }
   }
-
-  reviewClick(event) {
+  
+  logIndicatorValue(event) {
     if (event.colDef.field === 'rating') {
+      const indicatorValue = event.data.Indicator;
       this.dialog.open(ReviewWindowComponent, {
-        width: '500px',  // oder die gewünschte Breite
-        // Weitere Konfigurationsoptionen hier
+        data: { indicatorValue: indicatorValue },
+        width: '500px',  
+        height: '600px'
       });
     }
   }
